@@ -1,0 +1,16 @@
+<div class="bg-black w-full h-full min-h-screen flex justify-center items-center">
+    <div class="p-4 absolute top-0 left-0 w-full">
+        <img class="scale-90" src="/assets/images/logo.png">
+    </div>
+    <ul class="text-white text-lg text-center _menu">
+        <li *ngFor="let menuElem of menu" class="cursor-pointer mb-6 transition-all hover:tracking-wide">{{ menuElem }}</li>
+    </ul>
+    <ul class="absolute left-0 bottom-0 m-0 p-4 _socials">
+        <a class="mb-4 block transition-all hover:scale-125" *ngFor="let social of socials"
+           [href]="social.link">
+            <li>
+                <img class="max-w-14" [src]="'assets/icons/' + social.name + '.svg'" />
+            </li>
+        </a>
+    </ul>
+</div>
