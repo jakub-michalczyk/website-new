@@ -1,28 +1,24 @@
 import { Component } from '@angular/core';
 import { ISocials } from 'src/global/interfaces';
+import { MENU, SOCIALS } from './app.data';
+import { EPosition, NavigationService } from 'src/services/navigation.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
-	menu: string[] = [
-		'experience',
-		'projects',	
-		'contact'
-	]
-	socials: ISocials[] = [
-		{
-			link: 'https://github.com/jakub-michalczyk',
-			name: 'github'
-		},
-		{
-			link: 'www.linkedin.com/in/michalczyk-jakub',
-			name: 'linkedin'
-		},
-		{
-			link: 'mailto:kontakt.jakubmichalczyk@gmail.com',
-			name: 'mail'
-		}
-	]
+  constructor(private navigationService: NavigationService) {}
+
+  EPosition = EPosition;
+  socials = SOCIALS;
+  menu = MENU;
+
+  get navigationPosition() {
+    return this.navigationService.position;
+  }
+
+  updatePosition() {
+    this.navigationService.changePosition();
+  }
 }
