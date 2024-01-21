@@ -1,10 +1,10 @@
 <div class="bg-black w-full h-full min-h-screen flex justify-center items-center">
 	<div class="p-4 absolute top-0 left-0 w-full">
-		<img class="scale-90"
+		<img class="md:scale-90"
 			 src="/assets/images/logo.png">
 	</div>
 	<ul class="text-white text-lg text-center absolute transition-all left-[50%] -translate-x-2/4"
-		[ngClass]="navigationPosition === EPosition.TOP ? 'py-6 flex top-[0%]' : 'top-[50%]  -translate-y-2/4'">
+		[ngClass]="navigationPosition === EPosition.TOP ? 'py-6 flex right-0 md:right-auto top-[0%]' : 'top-[50%]  -translate-y-2/4'">
 		<a *ngFor="let menuElem of menu"
 		   [ngClass]="{'mx-4': navigationPosition === EPosition.TOP}"
 		   (click)="updatePosition()"
@@ -20,7 +20,7 @@
 		   *ngFor="let social of socials"
 		   [href]="social.link">
 			<li>
-				<img class="max-w-14"
+				<img class="max-w-10 md:max-w-14"
 					 [src]="'assets/icons/' + social.name + '.svg'" />
 			</li>
 		</a>
