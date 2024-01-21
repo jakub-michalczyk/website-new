@@ -12,7 +12,9 @@
 			<li class="cursor-pointer mb-6 transition-all hover:tracking-wide">{{ menuElem }}</li>
 		</a>
 	</ul>
-	<router-outlet></router-outlet>
+	<div class="w-full">
+		<router-outlet></router-outlet>
+	</div>
 	<ul class="absolute left-0 bottom-0 m-0 p-4">
 		<a class="mb-4 block transition-all hover:scale-125"
 		   *ngFor="let social of socials"
