@@ -2,7 +2,7 @@
 	<div class="hidden lg:block">
 		<div class="items-center flex">
 			<div class="w-full bg-white h-[1px] flex justify-between">
-				<div *ngFor="absolute let line of lines; let last = last; let first = first"
+				<div *ngFor="let line of lines; let last = last; let first = first"
 					 class="w-[1px] h-2 -translate-y-2/4"
 					 [ngClass]="{'bg-white': !last && !first }"></div>
 			</div>
