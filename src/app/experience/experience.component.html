@@ -1,0 +1,25 @@
+<div class="max-w-7xl mx-auto text-white px-20">
+	<div class="hidden lg:block">
+		<div class="items-center flex">
+			<div class="w-full bg-white h-[1px] flex justify-between">
+				<div *ngFor="let line of lines; let last = last; let first = first"
+					 class="w-[1px] h-2 -translate-y-2/4"
+					 [ngClass]="{'bg-white': !last && !first }"></div>
+			</div>
+			<img class="-translate-x-2/4"
+				 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbUlEQVR4nO3VMQqAMBBE0bmGhYiXNF28mHf7IoqEbbYQZIt5XbrhhxDJPgJmVQAs3LoqALZn0K4K8KCEC2VcKONCGRfKuFAGOJ7PdVKRq+oecnGRyEUioFV5Nc1DRi4SuUgErCVezTjoPZj+dQJmEkITtpccBwAAAABJRU5ErkJggg==">
+		</div>
+	</div>
+	<div class="mt-4 flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl mx-auto">
+		<div class="text-center my-10 lg:my-0"
+			 *ngFor="let company of companies">
+			<div class="mb-5 font-semibold">{{ company.timePeriod }}</div>
+			<img class="inline w-28"
+				 [src]="'/assets/images/' + company.name + '.png'">
+			<ul class="w-full text-left mt-3 text-sm flex flex-wrap">
+				<li *ngFor="let technology of company.techstack; let last = last">{{ technology }} <span
+						  *ngIf="!last">•&nbsp;</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
