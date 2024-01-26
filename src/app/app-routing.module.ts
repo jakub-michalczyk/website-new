@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ExperienceComponent } from './experience/experience.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
-	{
-		path: 'experience',
-		component: ExperienceComponent
-	}
+  {
+    path: 'experience',
+    component: ExperienceComponent,
+  },
+  {
+    path: 'projects',
+    component: ProjectsComponent,
+  },
 ];
 
 @NgModule({
