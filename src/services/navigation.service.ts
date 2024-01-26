@@ -17,9 +17,5 @@ export class NavigationService {
     this.position === EPosition.CENTER
       ? (this.position = EPosition.TOP)
       : (this.position = EPosition.CENTER);
-
-    if (this.position === EPosition.CENTER) {
-      this.router.navigate(['/']);
-    }
   }
 }
