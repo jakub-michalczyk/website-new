@@ -1,6 +1,6 @@
 import { ISocials } from 'src/global/interfaces';
 
-export const MENU: string[] = ['experience', 'projects', 'contact'];
+export const MENU: string[] = ['experience', 'techstack', 'projects'];
 
 export const SOCIALS: ISocials[] = [
   {

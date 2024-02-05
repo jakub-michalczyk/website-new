@@ -1,0 +1,8 @@
+<div
+	 class="text-white max-w-md md:max-w-4xl grid grid-cols-2 md:grid-cols-4 mx-auto px-20 gap-x-24 gap-y-10 justify-items-center ">
+	<div *ngFor="let tech of data"
+		 class="w-full text-center">
+		<img [src]="'assets/icons/' + tech + '.svg'">
+		<div class="pt-6">{{ tech }}</div>
+	</div>
+</div>
