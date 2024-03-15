@@ -8,7 +8,7 @@ export const SOCIALS: ISocials[] = [
     name: 'github',
   },
   {
-    link: 'www.linkedin.com/in/michalczyk-jakub',
+    link: 'https://www.linkedin.com/in/michalczyk-jakub',
     name: 'linkedin',
   },
   {
